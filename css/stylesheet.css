@@ -1,0 +1,150 @@
+
+.container {
+display: grid;
+grid-template-columns: 20% 80%;
+grid-template-rows: 15% 40% 30% 50%;
+height: 100vh;
+width: 100vw;
+max-width: 100%;
+margin-right: 100px;
+margin-left: 100px;
+}
+
+img {
+position: relative;
+height: 120px;
+width: 45%;
+border-radius: 50%;
+margin-left: 75px;
+margin-top: 15px;
+margin-bottom: 20px;
+}
+
+.gridSection1 {
+grid-column-start: 1;
+grid-row-start: 1;
+background-color: #b2ebf2;
+}
+
+.gridSection2 {
+grid-column-start: 2;
+grid-row-start: 1;
+height: 60%;
+padding-left: 30px;
+padding-top: 20px;
+}
+
+.gridSection3 {
+grid-column-start: 1;
+grid-row-start: 2;
+height: 130%;
+background-color: #b2ebf2;
+padding-top: 40px;
+}
+
+.gridSection4 {
+grid-column-start: 1;
+grid-row-start: 3;
+background-color: #b2ebf2;
+}
+
+.gridSection5 {
+grid-column-start: 1;
+grid-row-start: 4;
+padding-bottom: 140px;
+background-color: #b2ebf2;
+text-align: center;
+color: #005662;
+}
+
+.gridSection6 {
+	grid-column-start: 2;
+	grid-row-start: 2;
+	margin-top: 50px;
+	padding-left: 30px;
+	color: #005662;
+}
+
+.gridSection7 {
+	grid-column-start: 2;
+	grid-row-start: 3;
+	padding-left: 30px;
+	color: #005662;
+}
+
+.gridSection8 {
+	grid-column-start: 2;
+	grid-row-start: 4;
+	padding-left: 30px;
+	padding-top: 30px;
+	color: #005662;
+}
+
+#name {
+	text-transform: uppercase;
+}
+
+span {
+	color: #4dd0e1;
+}
+
+#jobTitle {
+	color: #1c313a;
+	margin-top: -20px;
+}
+
+#jobTitle span {
+	text-decoration: underline;
+	text-decoration-color: #4dd0e1;
+	color: #1c313a;
+}
+
+
+#contactDetails {
+	text-align: center;
+	background-color: #005662;
+	color: #b2ebf2;
+	text-transform: uppercase;
+}
+
+#myHobbies {
+	text-align: center;
+	background-color: #005662;
+	color: #b2ebf2;
+	text-transform: uppercase;
+}
+
+#aboutMe {
+	text-align: center;
+	background-color: #005662;
+	color: #b2ebf2;
+	text-transform: uppercase;
+}
+
+#contactMe {
+	text-align: justify;
+	padding-left: 30px;
+	font-size: 80%;
+	color: #005662;
+}
+
+#aboutBloc {
+	display: inline-block;
+	text-align: justify;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 80%;
+	color: #005662;
+}
+
+#hobbiesIcons {
+	letter-spacing: 10px;
+	font-size: 35px;
+}
+
+#education {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
