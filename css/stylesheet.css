@@ -1,493 +1,185 @@
-@media (min-width: 760px) {
-	.container {
-		display: grid;
-		grid-template-columns: 20% 80%;
-		grid-template-rows: 12% 32% 38% 8%;
-		height: auto;
-	}
+*{
+	font-family: 'Overpass', sans-serif;
 }
 
-@media only screen and (min-device-width : 760px) and (max-device-width : 1024px) {
-	.container {
-		display: flex;
-		flex-direction: column;
-	}
-	img {
-		width: 30%;
-	}
-	#name {
-		text-align: center;
-	}
-	#jobTitle {
-		text-align: center;
-	}
+
+body{
+	margin:0;
 }
 
-@media (min-width: 600px) {
-	.container {
-		grid-template-areas: 
-		'picture'
-		'name'
-		'contact'
-		'about'
-		'hobbies'
-		'education'
-		'work'
-		'references';
-	}
+
+.container{
+	display:grid;
+	width:100vw;
+	padding:0;
+	grid-template-areas: 
+		'sideBar nameBlock nameBlock nameBlock nameBlock nameBlock'
+		'sideBar nameBlock nameBlock nameBlock nameBlock nameBlock'
+		'sideBar education education education education education'
+		'sideBar workExperience workExperience workExperience workExperience workExperience'
+		'sideBar references references references references references'
 }
 
-@media (max-width: 600px) {
-	.container {
-		grid-template-areas: 
-		'picture'
-		'name'
-		'contact'
-		'about'
-		'hobbies'
-		'education'
-		'work'
-		'references';
-	}
-	img {
-		width: 50%;
-	}
-	.gridSection3 {
-		display: flex;
-		flex-direction: column;
-	}
-	#openClassroomsText {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	} 
-	#universityText {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	}
-	#closeBrothersText {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
+@media screen and (max-width: 1200px){
+	
+	.container{
+	display:grid;
+	width:100vw;
+	grid-template-areas: 
+		'nameBlock nameBlock'
+		'sideBar sideBar'
+		'sideBar  sideBar '
+		'sideBar  sideBar '
+		'sideBar  sideBar'
+		'education education'
+		'workExperience workExperience'
+		'references references'
 
 	}
-	#devereText {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
+	.sideBar{
+		grid-area: sideBar;
+		width:100vw;
+		background-color: #000051;
+	}
+	.sideBarBody{
+		text-align: center;		
+	}
+	.sideBarBodyAbout{
+	padding:0rem 2.5rem 2.5rem 2.5rem !important ;
+	font-size: 16px;
+}
+
+}
+@media screen and (max-width: 500px){
+	body{
+		margin:0;
+	}
+	.sectionDate{
+		width:40%;
+		font-size: 14px;
+	}
+	.sectionBody{
+		width:60%;
+		font-size: 14px;
+
+	}
+	.education{
+		font-size: 16px;
+		padding:1rem !important;
+	
+	}
+	.workExperience{
+		font-size: 16px;
+		padding:1rem !important;
+	}
+	.references{
+		font-size: 16px;
+		padding: 0rem !important;
+
+	}
+	.container{
+		width:100%;
 		
 	}
-	#foteText {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
+	.listSection{
+		padding:0.4rem;
 	}
-	#closeDate {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	}
-	#devereDate {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	}
-	#foteDate {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	}
-	#referenceOne {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	}
-	#referenceTwo {
-		display: flex;
-		flex-direction: column;
-		text-align: justify;
-		flex: wrap;
-		width: 80%;
-	}
+	
 
 }
 
-img {
-position: relative;
-max-height: 100%;
-max-width: 100%;
-border-radius: 50%;
-margin-left: 35%;
-margin-top: 10%;
-margin-bottom: 10%;
+.sideBarBodyAbout{
+	padding:0rem 2.5rem 30rem 2.5rem ;
+	font-size: 16px;
+	color: #000051;
 }
 
-.gridSection1 {
-grid-area: picture;
-grid-column-start: 1;
-grid-row-start: 1;
-background-color: #b2ebf2;
-max-width: 100%;
-max-height: 100%;
+
+.sideBar{
+	grid-area: sideBar;	
+	background-color: #3498db;
 }
 
-.gridSection2 {
-grid-area: name;
-grid-column-start: 2;
-grid-row-start: 1;
-padding-left: 1%;
-padding-top: 2%;
-max-width: 80%;
-max-height: 100%;
+.sideBarHeads{
+	text-align: center;
+	background-color: #1a237e;
+	color: #3498db;
+	text-transform: uppercase;
+}
+.sideBarBody{
+	padding:0rem 2.5rem 0rem 2.5rem ;
+	font-size: 16px;
+}
+.hobbies{
+	display: flex;
+	justify-content: center;
 }
 
-.gridSection3 {
-grid-area: contact;
-grid-column-start: 1;
-grid-row-start: 2;
-background-color: #b2ebf2;
-max-width: 100%;
-max-height: auto;
-padding-top: 8%;
+.nameBlock{
+	font-size: 16px;
+	grid-area: nameBlock;
+	padding:3rem;
 }
-
-.gridSection4 {
-grid-area: about;
-grid-column-start: 1;
-grid-row-start: 3;
-background-color: #b2ebf2;
-max-width: 100%;
-max-height: 100%;
-}
-
-.gridSection5 {
-grid-area: hobbies;
-grid-column-start: 1;
-grid-row-start: 4;
-padding-bottom: 20%;
-background-color: #b2ebf2;
-text-align: center;
-margin-top: 10%;
-color: #005662;
-max-width: 100%;
-max-height: 100%;
-}
-
-.gridSection6 {
+.education{
+	font-size: 16px;
 	grid-area: education;
-	grid-column-start: 2;
-	grid-row-start: 2;
-	margin-top: 5%;
-	padding-left: 1%;
-	color: #005662;
-	max-width: 80%;
-	max-height: 30%;
-
-}
-
-.gridSection7 {
-	grid-area: work;
-	grid-column-start: 2;
-	grid-row-start: 3;
-	padding-left: 1%;
-	padding-top: 1%;
-	padding-bottom: 2%;
-	color: #005662;
-	max-width: 80%;
-	max-height: 100%;
+	padding:3rem;
 	
 }
-
-.gridSection8 {
+.workExperience{
+	font-size: 16px;
+	grid-area: workExperience;
+	padding:3rem;
+}
+.references{
+	font-size: 16px;
 	grid-area: references;
-	grid-column-start: 2;
-	grid-row-start: 4;
-	padding-left: 1%;
-	padding-bottom: 40%;
-	padding-top: 5%;
-	color: #005662;
-	max-width: 80%;
-	max-height: 100%;
+	padding:3rem;
+}
+.list{
+	display: inline;
+	float:left;
+	width:50%;
+	color: #000051;
 
 }
-
-#name {
+.listHead{
 	text-transform: uppercase;
-	font-family: sans-serif;
 }
 
-h1 span {
-	color: #4dd0e1;
-}
- 
- span i {
- 	font-size: 20%;
- }
-
- p i {
- 	font-size: 20%;
- }
-
- li i {
- 	font-size: 20%;
- }
-
-#jobTitle {
-	color: #1c313a;
-	font-family: sans-serif;
-	margin-top: -2%;
-}
-
-#jobTitle span {
-	text-decoration: underline;
-	text-decoration-color: #4dd0e1;
-	color: #1c313a;
-}
-
-
-#contactDetails {
-	text-align: center;
-	background-color: #005662;
-	color: #b2ebf2;
+.sectionHead{
+	font-size:20px;
+	padding:1rem;
+	margin-bottom:1rem;
+	border-bottom:2px solid #3498db;
 	text-transform: uppercase;
-	font-family: sans-serif;
 }
 
-#myHobbies {
-	text-align: center;
-	background-color: #005662;
-	color: #b2ebf2;
-	text-transform: uppercase;
-	font-family: sans-serif;
-}
-
-#aboutMe {
-	text-align: center;
-	background-color: #005662;
-	color: #b2ebf2;
-	text-transform: uppercase;
-	font-family: sans-serif;
-}
-
-#contactMe {
-	text-align: justify;
-	padding-left: 15%;
-	padding-bottom: 2%; 
-	font-size: 1vw;
-	color: #005662;
-	font-family: calibri;
-}
-
-#aboutBloc {
+.sectionDate{
+	width:30%;
+	float:left;
 	display: inline-block;
-	text-align: justify;
-	padding-left: 15%;
-	padding-right: 15%;
-	font-size: 1vw;
-	color: #005662;
-	font-family: calibri;
-}
+	color: #000051;
+	
 
-#educationHistory {
-	font-family: sans-serif;
 }
-
-#work {
-	font-family: sans-serif;
-}
-
-#references {
-	font-family: sans-serif;
-}
-
-#hobbiesIcons {
-	letter-spacing: 10px;
-	font-size: 2vw;
-	font-family: calibri;
-}
-
-#educationHead h3 {
-	display: inline;
-}
-
-#educationHead {
-	border-bottom: 2px solid black;
-	padding-bottom: 1%;
+.sectionBody{
 	width:70%;
-}
-
-
-#openClassRooms{
-	height:30%;
-	width:70%;
-
-}
-
-#university{
-	height:30%;
-	width:70%;
-
-}
-
-#openClassroomsText{
-	font-family: calibri;
-	text-align: justify;
-	min-width: 50%;
-
-}
-
-#openClassRoomsDate{
-	vertical-align: top;
-	min-width:20%;
+	display: inline-block;	
 	float:left;
-	height:100%;
-	padding-right: 4%;
-	font-family: calibri;
-}
-
-#universityText{
-	font-family: calibri;
-	text-align: justify;
-	min-width: 50%;
+	color: #000051;
 
 }
 
-#universityDate{
-	vertical-align: top;
-	max-width:20%;
-	float:left;
-	height:100%;
-	padding-right: 4%;
-	font-family: calibri;
-
+#profileImage{
+	width:7rem;
+	border:1px solid transparent;
+	border-radius:100%;
 }
-
-#workHead h3 {
-	display: inline;
-}
-
-#workHead {
-	border-bottom: 2px solid black;
-	padding-bottom: 1%;
-	width:70%;
-}
-
-
-#closeBrothers {
-	height:15%;
-	width:70%;
-}
-
-#devere {
-	height:15%;
-	width:70%;
-}
-
-#fote {
-	height:15%;
-	width:70%;
-}
-
-#closeDate {
-	vertical-align: top;
-	max-width:20%;
-	float:left;
-	height:100%;
-	padding-right: 4%;
-	font-family: calibri;
-}
-
-#devereDate {
-	vertical-align: top;
-	max-width:20%;
-	float:left;
-	height:100%;
-	padding-right: 4%;
-	font-family: calibri;
-}
-
-#foteDate {
-	vertical-align: top;
-	max-width:20%;
-	float:left;
-	height:100%;
-	padding-right: 4%;
-	font-family: calibri;
-}
-
-#closeText {
-	padding-top: 0.2%;
-	color: #546e7a;
-	font-family: calibri;
-	text-align: justify;
-	min-width: 50%;
-}
-
-#devereText {
-	padding-top: 0.2%;
-	color: #546e7a;
-	font-family: calibri;
-	text-align: justify;
-	min-width: 50%;
-}
-
-#foteText {
-	padding-top: 0.2%;
-	color: #546e7a;
-	font-family: calibri;
-	text-align: justify;
-	min-width: 50%;
-}
-
-p span {
-	text-transform: uppercase;
-}
-
-
-#referenceHead h3 {
-	display: inline;
-}
-
-#referenceHead {
-	border-bottom: 2px solid black;
-	padding-bottom: 0.5%;
-	width:70%;
-}
-
-
-#referenceOne {
-	vertical-align: top;
-	float: left;
-	padding-right: 10%;
-	margin-left: -3.5%;
-	font-family: calibri;
-	text-align: justify;
-	list-style-type: none;
-}
-
-#referenceTwo {
-	vertical-align: top;
-	float; right;
-	font-family: calibri;
-	text-align: justify;
-	list-style-type: none;
+.imageBox{
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:1rem;
 }
